@@ -11,7 +11,7 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get(`${ this.url }/users?page=2?"per_page"=6`)
+    return this.http.get(`${ this.url }/users?page=2?"per_page"=2&`)
     .pipe(
       map( resp =>  resp['data'])
     );
